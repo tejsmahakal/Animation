@@ -1,0 +1,56 @@
+:root {
+    --white-color: #FFFFFF;
+  }
+  *, ::before, ::after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+  }
+  html{
+    font-size:16px;
+  }
+  
+  main{
+    background-color: black;  
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
+  }
+  .container:hover img{
+    opacity: 0.4;
+  }
+  main img{
+    width: 22rem;
+    height: 22rem;
+    border-radius: 1rem;
+    transform: perspective(60rem) rotatey(25deg);  
+    transform-origin: center;
+    box-shadow: 0 0 9px 0px gray;
+    transition: 0.5s;
+  }
+  .container img:hover{
+    transform: perspective(none) rotatey(0deg);
+    opacity: 1;
+  }
+  /* Media Queries */
+  @media screen and (max-width:1105px){
+    .container{
+      flex-direction: column;
+      gap:3rem;
+    }
+    main{
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      padding:2rem 0;
+    }
+  }
